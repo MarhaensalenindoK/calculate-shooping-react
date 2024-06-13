@@ -10,13 +10,6 @@ function ItemList({ items, handleItemChange, handleRemoveItem }) {
             placeholder="Apa yang dibeli?"
             value={item.itemName}
             onChange={(e) => {
-              if (e.target.value >= 0) {
-                let number = parseFloat(e.target.value);
-                e.target.value = number;
-              } else if (e.target.value < 0) {
-                e.target.value = 0;
-              }
-
               handleItemChange(index, "itemName", e.target.value);
             }}
             className="border p-2 w-full mb-2 lg:mb-0 lg:w-5/12 text-black rounded-lg"
