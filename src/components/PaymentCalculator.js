@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AddPurchase from "./AddPurchase";
 import DiscountAndShipping from "./DiscountAndShipping";
+import TaxAndService from "./TaxAndService";
 import PurchaseList from "./PurchaseList";
 
 function PaymentCalculator() {
@@ -8,6 +9,8 @@ function PaymentCalculator() {
   const [items, setItems] = useState([{ itemName: "", itemPrice: "" }]);
   const [discount, setDiscount] = useState(0);
   const [driver, setDriver] = useState(0);
+  const [tax, setTax] = useState(11);
+  const [serviceCharge, setServiceCharge] = useState(0);
   const [data, setData] = useState([]);
 
   const addItemField = () => {
@@ -63,8 +66,11 @@ function PaymentCalculator() {
     const total = items.reduce((sum, item) => sum + item.price, 0);
     const discountPercentage = parseFloat(discount ?? 0) / 100;
     const totalAfterDiscount = total - total * discountPercentage;
+    const taxPercentage = parseFloat(tax ?? 0) / 100;
+    const totalAfterTax =
+      totalAfterDiscount + totalAfterDiscount * taxPercentage;
     const shippingCostPerPerson = driver / personCount;
-    return totalAfterDiscount + shippingCostPerPerson;
+    return totalAfterTax + serviceCharge + shippingCostPerPerson;
   };
 
   return (
@@ -81,12 +87,25 @@ function PaymentCalculator() {
         handleRemoveItem={handleRemoveItem}
         addPurchase={addPurchase}
       />
-      <DiscountAndShipping
-        discount={discount}
-        setDiscount={setDiscount}
-        driver={driver}
-        setDriver={setDriver}
-      />
+
+      <div className="block lg:flex lg:gap-2">
+        <div className="w-full lg:w-1/2 mb-4 lg:mb-0">
+          <DiscountAndShipping
+            discount={discount}
+            setDiscount={setDiscount}
+            driver={driver}
+            setDriver={setDriver}
+          />
+        </div>
+        <div className="w-full lg:w-1/2 mb-4 lg:mb-0">
+          <TaxAndService
+            tax={tax}
+            setTax={setTax}
+            serviceCharge={serviceCharge}
+            setServiceCharge={setServiceCharge}
+          />
+        </div>
+      </div>
       {data.length > 0 && (
         <button
           className="bg-red-500 w-full mb-4 text-white p-2 rounded"

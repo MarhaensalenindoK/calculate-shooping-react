@@ -14,7 +14,7 @@ function PurchaseList({ data, discount, driver, calculateTotal }) {
             ))}
           </ul>
           <p className="font-bold">
-            Total setelah diskon {discount ?? 0}% dan ongkir(Rp {driver}): Rp
+            Total setelah diskon {discount ?? 0}% dan ongkir (Rp {driver}): Rp
             {calculateTotal(person.items, data.length).toFixed(2)}
           </p>
         </div>
