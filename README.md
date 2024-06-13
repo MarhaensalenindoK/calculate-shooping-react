@@ -1,3 +1,30 @@
+# Deskripsi Proyek: Kalkulator Pembayaran Barengan
+## Tentang Proyek
+Males ngitung kalo lagi beli barengan? Kami punya solusinya! Kenalkan, Kalkulator Pembayaran Barengan, sebuah aplikasi web sederhana namun sangat berguna untuk membantu Anda dan teman-teman menghitung total pembayaran setelah diskon dan ongkos kirim yang ditanggung rata.
+
+### Fitur Utama
+* Input Pembelian yang Mudah: Tambahkan nama pembeli dan item-item yang dibeli dengan harga masing-masing. Aplikasi ini mendukung penambahan banyak item sekaligus.
+* Perhitungan Diskon Otomatis: Masukkan persentase diskon yang tersedia, dan aplikasi ini akan secara otomatis menghitung total setelah diskon.
+* Penghitungan Ongkos Kirim: Ongkos kirim bisa ditambahkan dan akan dibagi rata secara otomatis kepada semua pembeli.
+* User-Friendly: Dengan desain yang simpel dan intuitif, Anda dapat dengan mudah memasukkan data dan mendapatkan hasilnya.
+* Reset Mudah: Fitur reset yang memungkinkan Anda untuk menghapus semua data dengan satu klik, sehingga siap digunakan untuk sesi berikutnya.
+### Cara Kerja
+* Tambahkan Pembelian: Masukkan nama pembeli, nama item, dan harga item.
+* Diskon dan Ongkir: Masukkan persentase diskon dan ongkos kirim.
+* Hasil Otomatis: Aplikasi akan secara otomatis menghitung total pembayaran setelah diskon dan ongkos kirim yang ditanggung rata oleh semua pembeli.
+* Reset Data: Selesai dengan satu sesi? Klik reset untuk menghapus semua data dan mulai dari awal.
+### Teknologi yang Digunakan
+* React: Untuk membuat antarmuka pengguna yang interaktif dan responsif.
+* Tailwind CSS: Untuk styling yang cepat dan mudah.
+* JavaScript: Untuk logika dan fungsionalitas aplikasi.
+### Mengapa Anda Harus Menggunakan Kalkulator Pembayaran Barengan?
+* Hemat Waktu: Tidak perlu lagi menghitung manual setiap kali membeli barengan dengan teman-teman.
+* Akurasi: Mengurangi risiko kesalahan perhitungan dengan otomatisasi.
+* Kemudahan: Antarmuka yang mudah digunakan membuat proses perhitungan menjadi lebih menyenangkan.
+# Mulai Sekarang!
+Cobalah Kalkulator Pembayaran Barengan sekarang dan rasakan kemudahannya! Tidak perlu lagi bingung saat harus menghitung pembayaran bersama. Nikmati kemudahan dan akurasi dengan aplikasi sederhana namun sangat bermanfaat ini.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
